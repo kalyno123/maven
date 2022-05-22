@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-05-21T15:14:03 CDT" name="scripts._01_AppleTest" finished-at="2022-05-21T15:14:12 CDT" duration-ms="9005">
+    <groups>
+    </groups>
+    <test started-at="2022-05-21T15:14:03 CDT" name="Command line test" finished-at="2022-05-21T15:14:12 CDT" duration-ms="9005">
+      <class name="scripts._01_AppleTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:scripts._01_AppleTest@687080dc]" started-at="2022-05-21T15:14:03 CDT" name="setup" finished-at="2022-05-21T15:14:07 CDT" duration-ms="4440" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testAppleTitle()[pri:0, instance:scripts._01_AppleTest@687080dc]" started-at="2022-05-21T15:14:07 CDT" name="testAppleTitle" finished-at="2022-05-21T15:14:10 CDT" duration-ms="3072" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAppleTitle -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:scripts._01_AppleTest@687080dc]" started-at="2022-05-21T15:14:10 CDT" name="setup" finished-at="2022-05-21T15:14:10 CDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testAppleURL()[pri:0, instance:scripts._01_AppleTest@687080dc]" started-at="2022-05-21T15:14:10 CDT" name="testAppleURL" finished-at="2022-05-21T15:14:12 CDT" duration-ms="1367" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAppleURL -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:scripts._01_AppleTest@687080dc]" started-at="2022-05-21T15:14:12 CDT" name="teardown" finished-at="2022-05-21T15:14:12 CDT" duration-ms="109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- scripts._01_AppleTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- scripts._01_AppleTest -->
+</testng-results>
