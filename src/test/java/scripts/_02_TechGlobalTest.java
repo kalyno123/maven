@@ -19,7 +19,7 @@ public class _02_TechGlobalTest {
         driver = Driver.getDriver();
     }
 
-    @Test
+    @Test(description = "TC123: Validate Application form heading")
     public void testApplicationFormHeading(){
         driver.get("https://www.techglobalschool.com/apply-now");
 

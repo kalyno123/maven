@@ -35,7 +35,7 @@ public class _01_AppleTest {
         Assert.assertEquals(actualTitle, expectedTitle);
     }
 
-    @Test
+    @Test(priority = 1, description = "TC345")
     public void testAppleURL(){
         driver.get("https://www.apple.com/");
 
@@ -45,6 +45,12 @@ public class _01_AppleTest {
         Assert.assertEquals(actualURL, expectedURL);
     }
 
+    @Test(priority = 2, description = "TC873")
+    public void X(){
+        //fail(); method is used to fail a test on purpose
+        //We use this for known issues; test cases that have a bug and a bug ticket is already generated for it.
+        Assert.fail("Failure on purpose"); // message here should be meaningful for reporting
+    }
 
     @AfterTest
     // 3. Teardown actions - after each test

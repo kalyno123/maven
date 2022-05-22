@@ -1,6 +1,7 @@
 package scripts;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -55,6 +56,22 @@ public class _03_EtsyTest extends Base{
         WebElement searchButton = driver.findElement(By.cssSelector("button[data-id='gnav-search-submit-button']")); // USED CSS SELECTOR LOCATOR BC IT'S 2ND FAST
         Assert.assertTrue(searchInputBox.isDisplayed()); // assertTrue(); RETURNS A BOOLEAN
         Assert.assertTrue(searchButton.isDisplayed()); // IT IS BEST TO ASSERT ONE AT A TIME TO EASILY DETECT WHICH ELEMENT FAILED IN THE REPORT
+    }
+
+    /* TEST CASE 3:
+    1. Go to https://www.etsy.com/
+    2. Search for "canvas painting"
+    3. Validate the results are more than zero
+    */
+
+    @Test(priority = 3)
+    public void testEtsySearchResult(){
+        driver.get("https://www.etsy.com/"); // NAVIGATES TO THE URL
+        WebElement searchInputBox = driver.findElement(By.id("global-enhancements-search-query")); // USED ID LOCATOR BC IT'S FASTEST, RELIABLE, AND UNIQUE
+        searchInputBox.sendKeys("canvas painting", Keys.ENTER);
+        WebElement searchResult = driver.findElement(By.cssSelector(".wt-display-inline-flex-sm>span")); // USED CSS SELECTOR LOCATOR BC IT'S 2ND FAST
+        Assert.assertTrue(Integer.parseInt(searchResult.getText().replaceAll("[^\\d]", "")) > 0);
+        // Assert.assertTrue(Integer.parseInt(resultTag.getText().substring(0, resultTag.getText().indexOf(" ")).replace(",", "")) > 0);
     }
 
 
