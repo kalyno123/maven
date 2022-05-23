@@ -28,7 +28,7 @@ public class _03_EtsyTest extends Base{
     }
     */
 
-    @Test
+    @Test(priority = 1)
     public void testEtsyLogo(){
         driver.get("https://www.etsy.com/"); // NAVIGATES TO THE URL
         WebElement etsyLogo = driver.findElement(By.id("logo")); // USED ID LOCATOR BC IT'S FASTEST, RELIABLE, AND UNIQUE
@@ -49,7 +49,7 @@ public class _03_EtsyTest extends Base{
     METHOD NAME = testEtsySearch();
     */
 
-    @Test
+    @Test(priority = 3)
     public void testEtsySearch(){
         driver.get("https://www.etsy.com/"); // NAVIGATES TO THE URL
         WebElement searchInputBox = driver.findElement(By.id("global-enhancements-search-query")); // USED ID LOCATOR BC IT'S FASTEST, RELIABLE, AND UNIQUE
@@ -64,7 +64,7 @@ public class _03_EtsyTest extends Base{
     3. Validate the results are more than zero
     */
 
-    @Test(priority = 3)
+    @Test(priority = 2, dependsOnMethods = "testEtsySearch")
     public void testEtsySearchResult(){
         driver.get("https://www.etsy.com/"); // NAVIGATES TO THE URL
         WebElement searchInputBox = driver.findElement(By.id("global-enhancements-search-query")); // USED ID LOCATOR BC IT'S FASTEST, RELIABLE, AND UNIQUE
@@ -73,6 +73,13 @@ public class _03_EtsyTest extends Base{
         Assert.assertTrue(Integer.parseInt(searchResult.getText().replaceAll("[^\\d]", "")) > 0);
         // Assert.assertTrue(Integer.parseInt(resultTag.getText().substring(0, resultTag.getText().indexOf(" ")).replace(",", "")) > 0);
     }
+
+    /* TestNG dependency between tests:
+    - This can be useful if tester runs one test only if another test is passing. So, the test will have a dependency on another test being executed successfully
+    - In this way, if the dependent test is failed, the other test will be ignored
+    NOTE: If you have both priority and dependency setup for the same test, dependencies will override the priority
+    Syntax: @Test (priority = 1, dependsOnMethods = "methodName") --> methodName MUST be "String"
+    */
 
 
 
