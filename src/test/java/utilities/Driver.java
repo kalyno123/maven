@@ -25,7 +25,7 @@ public class Driver {
             //System.setProperty("webdriver.chromedriver", "/Users/ngo/IdeaProjects/Selenium_Intro/chromedriver"); // TELLING THE SYSTEM WHERE THE CHROME DRIVER IS LOCATED
             //WebDriverManager.chromiumdriver().setup(); // THE DRIVER SETUP VIA MAVEN + BONI GARCIA
             //driver = new ChromeDriver(); // CREATE OBJECT OF WEB BROWSER
-            String browser = "chrome"; // define which browser you will run your test in
+            String browser = "chrome"; // define which browser you will run your test in; THIS IS INTERCHANGEABLE
             switch (browser) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
