@@ -23,7 +23,7 @@ public class _06_RadioButtonTest extends Base{
         for (WebElement element : faceBookPage.genderRadioButtons){ // List maintains insertion order: [female, male, custom]
             Assert.assertTrue(element.isDisplayed(), "Element is NOT displayed");
             Assert.assertTrue(element.isEnabled(), "Element is NOT enabled");
-            Assert.assertTrue(element.isSelected(), "Element is selected");
+            Assert.assertFalse(element.isSelected(), "Element is selected");
         }
 
         // Select “Female” and validate it is selected

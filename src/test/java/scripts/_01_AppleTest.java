@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import utilities.Driver;
 
@@ -45,7 +46,7 @@ public class _01_AppleTest {
         Assert.assertEquals(actualURL, expectedURL);
     }
 
-    @Test(priority = 2, description = "TC873")
+    @Ignore//(priority = 2, description = "TC873")
     public void X(){
         //fail(); method is used to fail a test on purpose
         //We use this for known issues; test cases that have a bug and a bug ticket is already generated for it.

@@ -1,6 +1,9 @@
+utilities/DropDownHandler.class
 pages/TGApplicationPage.class
 testng_learning/_01_Annotations.class
+pages/ExpediaPage.class
 testng_learning/_02_Priority_Keyword.class
+scripts/_07_DropDownTest.class
 pages/GoogleSearchResultPage.class
 scripts/_03_EtsyTest.class
 pages/FaceBookPage.class

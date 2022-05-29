@@ -16,7 +16,7 @@ public class _04_GoogleTest extends Base{
             GoogleSearchResultPage
    */
     @Test (description = "TC765: Validate Google search") // this will help link the test case # to the test scripts to locate both easier
-    public void searchResult(){
+    public void testGoogleSearch(){
         driver.get("https://www.google.com/");
         googleSearchPage.searchInputBox.sendKeys("Selenium", Keys.ENTER);
 
