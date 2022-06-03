@@ -1,9 +1,11 @@
 /Users/ngo/IdeaProjects/tentng_framework/src/test/java/pages/FaceBookPage.java
 /Users/ngo/IdeaProjects/tentng_framework/src/test/java/pages/TGApplicationPage.java
 /Users/ngo/IdeaProjects/tentng_framework/src/test/java/utilities/Driver.java
+/Users/ngo/IdeaProjects/tentng_framework/src/test/java/testng_learning/_03_Soft_vs_Hard_Assertions.java
 /Users/ngo/IdeaProjects/tentng_framework/src/test/java/scripts/_01_AppleTest.java
 /Users/ngo/IdeaProjects/tentng_framework/src/test/java/pages/GoogleSearchPage.java
 /Users/ngo/IdeaProjects/tentng_framework/src/test/java/utilities/Waiters.java
+/Users/ngo/IdeaProjects/tentng_framework/src/test/java/testng_learning/_04_Optional_Assertion_Error_Msg.java
 /Users/ngo/IdeaProjects/tentng_framework/src/test/java/testng_learning/_01_Annotations.java
 /Users/ngo/IdeaProjects/tentng_framework/src/test/java/scripts/_07_DropDownTest.java
 /Users/ngo/IdeaProjects/tentng_framework/src/test/java/scripts/_06_RadioButtonTest.java

@@ -11,15 +11,15 @@ import java.util.concurrent.TimeUnit;
 
 public class Driver {
 
-    // PRIVATE CONSTRUCTOR SO THIS OBJECT CAN'T BE CREATED OUTSIDE OF THIS CLASS
+    // SINGLETON DESIGN PATTERN: PRIVATE CONSTRUCTOR SO THIS OBJECT CAN'T BE CREATED OUTSIDE OF THIS CLASS
     private Driver(){
 
     }
 
-    // PRIVATE INSTANCE VARIABLE SO THIS ATTRIBUTE CAN'T BE MODIFIED OUTSIDE OF THIS CLASS
+    // ENCAPSULATION: PRIVATE INSTANCE VARIABLE SO THIS ATTRIBUTE CAN'T BE MODIFIED OUTSIDE OF THIS CLASS
     private static WebDriver driver;
 
-    // PUBLIC GET DRIVER METHOD
+    // ENCAPSULATION: PUBLIC GET DRIVER METHOD
     public static WebDriver getDriver(){
         if (driver == null){ // if driver is not create (empty) then create a driver object ... otherwise just return the already existing driver.
             //System.setProperty("webdriver.chromedriver", "/Users/ngo/IdeaProjects/Selenium_Intro/chromedriver"); // TELLING THE SYSTEM WHERE THE CHROME DRIVER IS LOCATED
@@ -49,7 +49,7 @@ public class Driver {
     }
 
 
-    // PUBLIC QUIT DRIVER METHOD
+    // QUIT DRIVER METHOD
     public static void quitDriver(){
         if (driver != null){ // this method is to teardown driver completely
             driver.manage().deleteAllCookies(); // deleting stored data from session

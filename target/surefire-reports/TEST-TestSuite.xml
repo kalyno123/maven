@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="57.993" tests="8" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="22.67" tests="8" errors="0" skipped="0" failures="3">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="18.0.1+0"/>
@@ -40,7 +40,7 @@
     <property name="java.class.path" value="/opt/homebrew/Cellar/maven/3.8.5/libexec/boot/plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="18"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test -PRegression"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -PSmoke"/>
     <property name="java.home" value="/opt/homebrew/Cellar/openjdk/18.0.1/libexec/openjdk.jdk/Contents/Home"/>
     <property name="apple.awt.application.name" value="Launcher"/>
     <property name="user.language" value="en"/>
@@ -61,32 +61,52 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase name="testAppleURL" classname="scripts._01_AppleTest" time="1.2"/>
-  <testcase name="testMainHeader" classname="scripts._03_EtsyTest" time="2.85"/>
-  <testcase name="testGoogleStoreLink" classname="scripts._04_GoogleTest" time="2.521"/>
-  <testcase name="testCheckBoxInHeroApp" classname="scripts._05_CheckBoxTest" time="0.976"/>
-  <testcase name="testFacebookGenderRadioButton" classname="scripts._06_RadioButtonTest" time="2.141"/>
-  <testcase name="testUnsecurePassword" classname="scripts._07_DropDownTest" time="3.565"/>
-  <testcase name="testExpediaDropdowns" classname="scripts._07_DropDownTest" time="35.758">
-    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#preferred\-class\-input\-trigger&quot;}&#10;  (Session info: chrome=101.0.4951.64)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;Chriskalys-MBP.local.tld&apos;, ip: &apos;fe80:0:0:0:1cc5:f739:1ee4:735d%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;12.4&apos;, java.version: &apos;18.0.1&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.64, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: /var/folders/jb/b_pd3zds2sv...}, goog:chromeOptions: {debuggerAddress: localhost:52706}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: f56dc9dd56f28132a33dcc593af979ea&#10;*** Element info: {Using=id, value=preferred-class-input-trigger}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"css selector","selector":"#preferred\-class\-input\-trigger"}
-  (Session info: chrome=101.0.4951.64)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+  <testcase name="testAppleTitle" classname="scripts._01_AppleTest" time="1.244"/>
+  <testcase name="testApplicationFormHeading" classname="scripts._02_TechGlobalTest" time="2.322"/>
+  <testcase name="testGoogleSearch" classname="scripts._04_GoogleTest" time="3.026"/>
+  <testcase name="testEtsyLogo" classname="scripts._03_EtsyTest" time="2.322"/>
+  <testcase name="testEtsySearch" classname="scripts._03_EtsyTest" time="2.119"/>
+  <testcase name="testEtsySearchResult" classname="scripts._03_EtsyTest" time="3.642">
+    <failure message="no such window: window was already closed&#10;  (Session info: chrome=102.0.5005.61)&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;Chriskalys-MBP.local.tld&apos;, ip: &apos;fe80:0:0:0:105f:17a5:52b5:dc6e%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;12.4&apos;, java.version: &apos;18.0.1&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /var/folders/jb/b_pd3zds2sv...}, goog:chromeOptions: {debuggerAddress: localhost:64152}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: ebfc62fca652c670885010c938ffb2c5&#10;*** Element info: {Using=css selector, value=.wt-display-inline-flex-sm&gt;span}" type="org.openqa.selenium.NoSuchWindowException">org.openqa.selenium.NoSuchWindowException: 
+no such window: window was already closed
+  (Session info: chrome=102.0.5005.61)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Chriskalys-MBP.local.tld', ip: 'fe80:0:0:0:1cc5:f739:1ee4:735d%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.4', java.version: '18.0.1'
+System info: host: 'Chriskalys-MBP.local.tld', ip: 'fe80:0:0:0:105f:17a5:52b5:dc6e%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.4', java.version: '18.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.64, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: /var/folders/jb/b_pd3zds2sv...}, goog:chromeOptions: {debuggerAddress: localhost:52706}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: f56dc9dd56f28132a33dcc593af979ea
-*** Element info: {Using=id, value=preferred-class-input-trigger}
-	at scripts._07_DropDownTest.testExpediaDropdowns(_07_DropDownTest.java:88)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /var/folders/jb/b_pd3zds2sv...}, goog:chromeOptions: {debuggerAddress: localhost:64152}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ebfc62fca652c670885010c938ffb2c5
+*** Element info: {Using=css selector, value=.wt-display-inline-flex-sm>span}
+	at scripts._03_EtsyTest.testEtsySearchResult(_03_EtsyTest.java:72)
 </failure>
-    <system-err><![CDATA[Starting ChromeDriver 101.0.4951.41 (93c720db8323b3ec10d056025ab95c23a31997c9-refs/branch-heads/4951@{#904}) on port 44680
+    <system-err><![CDATA[Starting ChromeDriver 102.0.5005.61 (0e59bcc00cc4985ce39ad31c150065f159d95ad3-refs/branch-heads/5005@{#819}) on port 41895
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-May 29, 2022 3:42:11 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+Jun 02, 2022 7:56:59 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
   </testcase>
-  <testcase name="testEbayDropdown" classname="scripts._07_DropDownTest" time="0"/>
+  <testcase name="teardown" classname="scripts._03_EtsyTest" time="3.646">
+    <failure message="no such window: window was already closed&#10;  (Session info: chrome=102.0.5005.61)&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;Chriskalys-MBP.local.tld&apos;, ip: &apos;fe80:0:0:0:105f:17a5:52b5:dc6e%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;12.4&apos;, java.version: &apos;18.0.1&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /var/folders/jb/b_pd3zds2sv...}, goog:chromeOptions: {debuggerAddress: localhost:64152}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: ebfc62fca652c670885010c938ffb2c5" type="org.openqa.selenium.NoSuchWindowException">org.openqa.selenium.NoSuchWindowException: 
+no such window: window was already closed
+  (Session info: chrome=102.0.5005.61)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Chriskalys-MBP.local.tld', ip: 'fe80:0:0:0:105f:17a5:52b5:dc6e%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.4', java.version: '18.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /var/folders/jb/b_pd3zds2sv...}, goog:chromeOptions: {debuggerAddress: localhost:64152}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ebfc62fca652c670885010c938ffb2c5
+</failure>
+  </testcase>
+  <testcase name="teardown" classname="scripts._01_AppleTest" time="3.651">
+    <failure message="no such window: window was already closed&#10;  (Session info: chrome=102.0.5005.61)&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;Chriskalys-MBP.local.tld&apos;, ip: &apos;fe80:0:0:0:105f:17a5:52b5:dc6e%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;12.4&apos;, java.version: &apos;18.0.1&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /var/folders/jb/b_pd3zds2sv...}, goog:chromeOptions: {debuggerAddress: localhost:64152}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: ebfc62fca652c670885010c938ffb2c5" type="org.openqa.selenium.NoSuchWindowException">org.openqa.selenium.NoSuchWindowException: 
+no such window: window was already closed
+  (Session info: chrome=102.0.5005.61)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Chriskalys-MBP.local.tld', ip: 'fe80:0:0:0:105f:17a5:52b5:dc6e%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.4', java.version: '18.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /var/folders/jb/b_pd3zds2sv...}, goog:chromeOptions: {debuggerAddress: localhost:64152}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ebfc62fca652c670885010c938ffb2c5
+	at scripts._01_AppleTest.teardown(_01_AppleTest.java:59)
+</failure>
+  </testcase>
 </testsuite>

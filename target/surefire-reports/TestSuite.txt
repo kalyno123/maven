@@ -1,17 +1,37 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 57.993 sec <<< FAILURE! - in TestSuite
-testExpediaDropdowns(scripts._07_DropDownTest)  Time elapsed: 35.758 sec  <<< FAILURE!
-org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"css selector","selector":"#preferred\-class\-input\-trigger"}
-  (Session info: chrome=101.0.4951.64)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Tests run: 8, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 22.67 sec <<< FAILURE! - in TestSuite
+testEtsySearchResult(scripts._03_EtsyTest)  Time elapsed: 3.642 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchWindowException: 
+no such window: window was already closed
+  (Session info: chrome=102.0.5005.61)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Chriskalys-MBP.local.tld', ip: 'fe80:0:0:0:1cc5:f739:1ee4:735d%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.4', java.version: '18.0.1'
+System info: host: 'Chriskalys-MBP.local.tld', ip: 'fe80:0:0:0:105f:17a5:52b5:dc6e%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.4', java.version: '18.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.64, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: /var/folders/jb/b_pd3zds2sv...}, goog:chromeOptions: {debuggerAddress: localhost:52706}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: f56dc9dd56f28132a33dcc593af979ea
-*** Element info: {Using=id, value=preferred-class-input-trigger}
-	at scripts._07_DropDownTest.testExpediaDropdowns(_07_DropDownTest.java:88)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /var/folders/jb/b_pd3zds2sv...}, goog:chromeOptions: {debuggerAddress: localhost:64152}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ebfc62fca652c670885010c938ffb2c5
+*** Element info: {Using=css selector, value=.wt-display-inline-flex-sm>span}
+	at scripts._03_EtsyTest.testEtsySearchResult(_03_EtsyTest.java:72)
+
+teardown(scripts._03_EtsyTest)  Time elapsed: 3.646 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchWindowException: 
+no such window: window was already closed
+  (Session info: chrome=102.0.5005.61)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Chriskalys-MBP.local.tld', ip: 'fe80:0:0:0:105f:17a5:52b5:dc6e%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.4', java.version: '18.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /var/folders/jb/b_pd3zds2sv...}, goog:chromeOptions: {debuggerAddress: localhost:64152}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ebfc62fca652c670885010c938ffb2c5
+
+teardown(scripts._01_AppleTest)  Time elapsed: 3.651 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchWindowException: 
+no such window: window was already closed
+  (Session info: chrome=102.0.5005.61)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Chriskalys-MBP.local.tld', ip: 'fe80:0:0:0:105f:17a5:52b5:dc6e%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.4', java.version: '18.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /var/folders/jb/b_pd3zds2sv...}, goog:chromeOptions: {debuggerAddress: localhost:64152}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ebfc62fca652c670885010c938ffb2c5
+	at scripts._01_AppleTest.teardown(_01_AppleTest.java:59)
 

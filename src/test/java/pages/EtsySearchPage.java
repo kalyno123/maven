@@ -9,6 +9,8 @@ import java.util.List;
 
 public class EtsySearchPage {
 
+    //NOTE: PAGE OBJECT MODEL --> CONSIST OF THE PAGE CONSTRUCTOR, THE WEB ELEMENTS, AND ANY RELATED METHODS FOR THE PAGE
+
     //DEFAULT CONSTRUCTOR
     public EtsySearchPage(WebDriver driver) {
         PageFactory.initElements(driver,this); // this method initializes all the elements below
@@ -24,7 +26,7 @@ public class EtsySearchPage {
     @FindBy (id = "logo")
     public WebElement etsyLogo;
 
-    @FindBy(css = ".wt-display-inline-flex-sm>span")
+    @FindBy (css = ".wt-display-inline-flex-sm>span")
     public WebElement searchResult;
 
     @FindBy (css = "ul[role='menubar'] span")

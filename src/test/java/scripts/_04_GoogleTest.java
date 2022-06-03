@@ -2,6 +2,7 @@ package scripts;
 
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import utilities.Waiters;
 
@@ -30,7 +31,7 @@ public class _04_GoogleTest extends Base{
     2. Click on "Store" link
     3. Validate the title of the page is "Google Store for Google Made Devices & Accessories"
     */
-    @Test(priority = 2, description = "TC123: Validate Google Store link")
+    @Test (priority = 2, description = "TC123: Validate Google Store link")
     public void testGoogleStoreLink(){
         driver.get("https://www.google.com/");
 
