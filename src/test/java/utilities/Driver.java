@@ -25,8 +25,10 @@ public class Driver {
             //System.setProperty("webdriver.chromedriver", "/Users/ngo/IdeaProjects/Selenium_Intro/chromedriver"); // TELLING THE SYSTEM WHERE THE CHROME DRIVER IS LOCATED
             //WebDriverManager.chromiumdriver().setup(); // THE DRIVER SETUP VIA MAVEN + BONI GARCIA
             //driver = new ChromeDriver(); // CREATE OBJECT OF WEB BROWSER
-            String browser = "chrome"; // define which browser you will run your test in; THIS IS INTERCHANGEABLE
-            switch (browser) {
+
+            // *** the browser define below with String is hard-coded ***
+            //String browser = "chrome"; // define which browser you will run your test in; THIS IS INTERCHANGEABLE
+            switch (ConfigReader.getProperty("browser")) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
@@ -43,7 +45,8 @@ public class Driver {
                     throw new NotFoundException("Browser IS NOT DEFINED properly!!!");
             }
             driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); // WAITING FOR THE WEB ELEMENT TO LOAD(EXIST)
+            //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); // WAITING FOR THE WEB ELEMENT TO LOAD(EXIST) ---> the time-amount(30) define is hard-coded
+            driver.manage().timeouts().implicitlyWait(Long.parseLong(ConfigReader.getProperty("implicitWait")), TimeUnit.SECONDS); // WAITING FOR THE WEB ELEMENT TO LOAD(EXIST)
         }
         return driver;
     }

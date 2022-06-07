@@ -40,8 +40,8 @@ public class _01_AppleTest {
     public void testAppleURL(){
         driver.get("https://www.apple.com/");
 
-        String expectedURL = "https://www.apple.com/";
         String actualURL = driver.getCurrentUrl();
+        String expectedURL = "https://www.apple.com/";
 
         Assert.assertEquals(actualURL, expectedURL);
     }

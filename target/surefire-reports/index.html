@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods, 1 failed,   5 passed</span>
+                    <span class="method-stats">6 methods, 1 failed,  1 skipped,  4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,10 +102,24 @@
                     <div class="method-list-content failed suite-smoke">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-smoke" title="scripts._03_EtsyTest" class="method navigator-link" hash-for-method="testEtsySearchResult">testEtsySearchResult</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-smoke" title="scripts._03_EtsyTest" class="method navigator-link" hash-for-method="testEtsySearch">testEtsySearch</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-smoke -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-smoke" class="hide-methods skipped suite-smoke"> (hide)</a> <!-- hide-methods skipped suite-smoke -->
+                      <a href="#" panel-name="suite-smoke" class="show-methods skipped suite-smoke"> (show)</a> <!-- show-methods skipped suite-smoke -->
+                    </span>
+                    <div class="method-list-content skipped suite-smoke">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-smoke" title="scripts._03_EtsyTest" class="method navigator-link" hash-for-method="testEtsySearchResult">testEtsySearchResult</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-smoke -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -127,11 +141,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-smoke" title="scripts._03_EtsyTest" class="method navigator-link" hash-for-method="testEtsyLogo">testEtsyLogo</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-smoke" title="scripts._03_EtsyTest" class="method navigator-link" hash-for-method="testEtsySearch">testEtsySearch</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -159,17 +168,17 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testEtsySearchResult">
-                  </a> <!-- testEtsySearchResult -->
-                  <span class="method-name">testEtsySearchResult</span>
+                  <a name="testEtsySearch">
+                  </a> <!-- testEtsySearch -->
+                  <span class="method-name">testEtsySearch</span>
                   <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: window was already closed
   (Session info: chrome=102.0.5005.61)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Chriskalys-MBP.local.tld&apos;, ip: &apos;fe80:0:0:0:105f:17a5:52b5:dc6e%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;12.4&apos;, java.version: &apos;18.0.1&apos;
+System info: host: &apos;Chriskalys-MacBook-Pro.local&apos;, ip: &apos;2607:fb90:9ba9:d15f:1daa:4348:d2ca:d6dd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;12.4&apos;, java.version: &apos;18.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /var/folders/jb/b_pd3zds2sv...}, goog:chromeOptions: {debuggerAddress: localhost:64152}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: ebfc62fca652c670885010c938ffb2c5
-*** Element info: {Using=css selector, value=.wt-display-inline-flex-sm&gt;span}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /var/folders/jb/b_pd3zds2sv...}, goog:chromeOptions: {debuggerAddress: localhost:53369}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: b5c23dcb7ddd2418f1fdd21cb4725e62
+*** Element info: {Using=id, value=logo}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -177,13 +186,13 @@ Session ID: ebfc62fca652c670885010c938ffb2c5
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
+	at org.openqa.selenium.By$ById.findElement(By.java:188)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy11.getText(Unknown Source)
-	at scripts._03_EtsyTest.testEtsySearchResult(_03_EtsyTest.java:72)
+	at jdk.proxy2/jdk.proxy2.$Proxy11.isDisplayed(Unknown Source)
+	at scripts._03_EtsyTest.testEtsySearch(_03_EtsyTest.java:56)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 31 stack frames
 </div> <!-- stack-trace -->
@@ -191,6 +200,25 @@ Session ID: ebfc62fca652c670885010c938ffb2c5
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-smoke-class-failed -->
+          <div class="suite-smoke-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">scripts._03_EtsyTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testEtsySearchResult">
+                  </a> <!-- testEtsySearchResult -->
+                  <span class="method-name">testEtsySearchResult</span>
+                  <div class="stack-trace">java.lang.Throwable: Method _03_EtsyTest.testEtsySearchResult()[pri:2, instance:scripts._03_EtsyTest@281e3708] depends on not successfully finished methods
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 21 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-smoke-class-skipped -->
           <div class="suite-smoke-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -202,13 +230,6 @@ Session ID: ebfc62fca652c670885010c938ffb2c5
                   <a name="testEtsyLogo">
                   </a> <!-- testEtsyLogo -->
                   <span class="method-name">testEtsyLogo</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testEtsySearch">
-                  </a> <!-- testEtsySearch -->
-                  <span class="method-name">testEtsySearch</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -233,6 +254,21 @@ Session ID: ebfc62fca652c670885010c938ffb2c5
           <div class="suite-smoke-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">scripts._01_AppleTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAppleTitle">
+                  </a> <!-- testAppleTitle -->
+                  <span class="method-name">testAppleTitle</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-smoke-class-passed -->
+          <div class="suite-smoke-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">scripts._02_TechGlobalTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -243,21 +279,6 @@ Session ID: ebfc62fca652c670885010c938ffb2c5
                   <span class="method-name">testApplicationFormHeading</span>
                   <em>
 (TC123: Validate Application form heading)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-smoke-class-passed -->
-          <div class="suite-smoke-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">scripts._01_AppleTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testAppleTitle">
-                  </a> <!-- testAppleTitle -->
-                  <span class="method-name">testAppleTitle</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -331,34 +352,34 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(6);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testEtsySearchResult')
+data.setCell(0, 1, 'testEtsySearch')
 data.setCell(0, 2, 'scripts._03_EtsyTest')
-data.setCell(0, 3, 3637);
+data.setCell(0, 3, 126608);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testGoogleSearch')
-data.setCell(1, 2, 'scripts._04_GoogleTest')
-data.setCell(1, 3, 3025);
+data.setCell(1, 1, 'testAppleTitle')
+data.setCell(1, 2, 'scripts._01_AppleTest')
+data.setCell(1, 3, 29360);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'testEtsyLogo')
 data.setCell(2, 2, 'scripts._03_EtsyTest')
-data.setCell(2, 3, 2322);
+data.setCell(2, 3, 28705);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testApplicationFormHeading')
-data.setCell(3, 2, 'scripts._02_TechGlobalTest')
-data.setCell(3, 3, 2321);
+data.setCell(3, 1, 'testGoogleSearch')
+data.setCell(3, 2, 'scripts._04_GoogleTest')
+data.setCell(3, 3, 25824);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testEtsySearch')
-data.setCell(4, 2, 'scripts._03_EtsyTest')
-data.setCell(4, 3, 2119);
+data.setCell(4, 1, 'testApplicationFormHeading')
+data.setCell(4, 2, 'scripts._02_TechGlobalTest')
+data.setCell(4, 3, 23618);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testAppleTitle')
-data.setCell(5, 2, 'scripts._01_AppleTest')
-data.setCell(5, 3, 1242);
+data.setCell(5, 1, 'testEtsySearchResult')
+data.setCell(5, 2, 'scripts._03_EtsyTest')
+data.setCell(5, 3, 0);
 window.suiteTableData['smoke']= { tableData: data, tableDiv: 'times-div-smoke'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 14 seconds</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-smoke">
               </div> <!-- times-div-smoke -->
             </div> <!-- times-div -->
@@ -412,81 +433,73 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testAppleTitle</span>
-                <span class="method-start">2737 ms</span>
+                <span class="method-start">2194 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">scripts._02_TechGlobalTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">3982 ms</span>
+                <span class="method-start">31558 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testApplicationFormHeading</span>
-                <span class="method-start">4004 ms</span>
+                <span class="method-start">31581 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">6326 ms</span>
+                <span class="method-start">55199 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">scripts._04_GoogleTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">6435 ms</span>
+                <span class="method-start">55304 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testGoogleSearch</span>
-                <span class="method-start">7591 ms</span>
+                <span class="method-start">56351 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">10617 ms</span>
+                <span class="method-start">82175 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">scripts._03_EtsyTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">10713 ms</span>
+                <span class="method-start">82270 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testEtsyLogo</span>
-                <span class="method-start">11890 ms</span>
+                <span class="method-start">83312 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">14212 ms</span>
+                <span class="method-start">112017 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">14321 ms</span>
+                <span class="method-start">112124 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testEtsySearch</span>
-                <span class="method-start">15375 ms</span>
+                <span class="method-start">113120 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">teardown</span>
-                <span class="method-start">17494 ms</span>
+                <span class="method-start">239732 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setup</span>
-                <span class="method-start">17601 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">testEtsySearchResult</span>
-                <span class="method-start">18701 ms</span>
+                <span class="method-start">239756 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">teardown</span>
-                <span class="method-start">22344 ms</span>
-              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">scripts._01_AppleTest</div> <!-- chronological-class-name -->
@@ -494,7 +507,7 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">teardown</span>
-                <span class="method-start">22348 ms</span>
+                <span class="method-start">239756 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

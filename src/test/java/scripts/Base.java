@@ -29,7 +29,7 @@ public class Base {
 
 
     @BeforeMethod
-    // INITIALIZING OBJECT(S)
+    // INITIALIZING OBJECTS VARIABLES
     public void setup(){
         driver = Driver.getDriver();
         explicitWait = new WebDriverWait(driver, 10);

@@ -11,7 +11,7 @@ public class _03_Soft_vs_Hard_Assertions extends Base {
     public void method1(){
         // HARD ASSERTION --> WHEN THERE IS AN ERROR AT ANY LINE THE PROGRAM FLOW *WILL* BREAK AND WILL *NOT* CONTINUE WITH THE REST
         Assert.assertTrue(true);
-        Assert.assertFalse(false, "===FAIL===");
+        Assert.assertFalse(true, "===FAIL===");
         System.out.println("Hello World");
     }
 
