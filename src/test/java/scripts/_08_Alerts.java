@@ -106,6 +106,27 @@ public class _08_Alerts extends Base{
 
 
 
+    /* TEST CASE 5:
+    Go to https://www.amazon.com/
+    Click on “Select your address” link in the top navigation bar
+    Validate “Choose your location” modal is displayed
+    Enter your zip code to input box
+    Click on “Apply” button
+    Validate the zip code entered displayed in the delivery message
+    */
+    @Test(priority = 5, description = "TASK-5 - Amazon Address Modal")
+    public void testAmazonAddressModal(){
+        driver.get("https://www.amazon.com/");
+        amazonHomePage.selectAddressLink.click();
+        String zipCode = "60018";
+
+        amazonHomePage.zipCodeInputBox.sendKeys(zipCode);
+        amazonHomePage.applyButton.click();
+
+        Assert.assertTrue(amazonHomePage.deliveryMessage.getText().contains(zipCode));
+    }
+
+
 
 
 
