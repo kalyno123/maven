@@ -149,4 +149,29 @@ public class _12_ActionsClass extends Base{
                 .perform();
     }
 
+    /* TEST CASE 8:
+    Go to https://www.etsy.com/
+    Hover over on "Jewelry & Accessories" menu item
+    Validate below categories are displayed with their expected texts
+    Accessories
+    Bags & Purses
+    Necklaces
+    Rings
+    Earrings
+    Bracelets
+    Body Jewelry
+    All Jewelry
+    */
+    @Test(priority = 8, description = "Etsy | test")
+    public void etsyTest(){
+        driver.get("https://www.etsy.com/");
+        actions.moveToElement(etsySearchPage.mainHeaderLinks.get(1)).perform();
+        String[] jewelryMenuItemsText = {"Accessories", "Bags & Purses", "Necklaces", "Rings", "Earrings", "Bracelets", "Body Jewelry", "All Jewelry"};
+        int index = 0;
+        for (WebElement menuItem : etsySearchPage.jewelryAccessoriesMenuItems){
+            Waiters.waitUntilTextToBePresentInElement(driver, 10, menuItem, jewelryMenuItemsText[index++]);
+            softAssert.assertEquals(menuItem.getText(), jewelryMenuItemsText[index++]);
+        }
+    }
+    // NOTE: IF YOU'RE NOT ABLE TO GET TEXT OF THE WEB ELEMENT AND ALL OTHER WAYS ARE NOT SUCCESSFUL LAST OPTION IS TO USE JAVASCRIPT EXECUTOR AS JS IS THE BASE OF THE APPLICATION.
 }

@@ -59,7 +59,17 @@ public class HeroAppPage {
     @FindBy(id = "uploaded-files")
     public WebElement uploadedFileText;
 
+    @FindBy(css = "table[id='table1'] th")
+    public List<WebElement> tableHeaders;
 
+    @FindBy(css = "#table1>tbody>tr:nth-child(1)>td") // xpath = "(//table[@id='table1'']//tr)[2]/td"
+    public List<WebElement> table1Row1;
+
+    @FindBy(xpath = "//table[@id='table1']/tbody/tr/td[2]") // css = "#table1>tbody td:nth-child(2)"
+    public List<WebElement> table1Column2;
+
+    @FindBy(css = "#table1>tbody>tr>td")
+    public List<WebElement> tableBody;
 
 
     public void clickOnLink(String linkText){

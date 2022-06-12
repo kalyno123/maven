@@ -14,5 +14,7 @@ public class TGHomePage {
     @FindBy(id = "dataItem-kuiqff9g-comp-kixnxkbc")
     public WebElement faceBookIcon;
 
+    @FindBy(css = "#comp-kvjohd5t5>a")
+    public WebElement registerForIntroLink;
 
 }

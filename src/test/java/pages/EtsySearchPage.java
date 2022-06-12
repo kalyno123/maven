@@ -41,5 +41,7 @@ public class EtsySearchPage {
     @FindBy(id = "join-neu-overlay-title")
     public WebElement signInModalHeading;
 
+    @FindBy(css = "ul[data-node-id='10855']>li")
+    public List<WebElement> jewelryAccessoriesMenuItems;
 
 }

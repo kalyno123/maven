@@ -1,5 +1,6 @@
 package scripts;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -21,6 +22,7 @@ public class Base {
     Wait fluentWait;
     SoftAssert softAssert;
     Actions actions;
+    JavascriptExecutor js;
 
     EtsySearchPage etsySearchPage;
     TGApplicationPage tgApplicationPage;
@@ -33,7 +35,6 @@ public class Base {
     AmazonHomePage amazonHomePage;
     TGHomePage tgHomePage;
 
-
     @BeforeMethod
     // INITIALIZING OBJECTS VARIABLES
     public void setup(){
@@ -42,6 +43,7 @@ public class Base {
         fluentWait = new FluentWait(driver).withTimeout(30, TimeUnit.SECONDS).pollingEvery(2, TimeUnit.SECONDS).ignoring(Exception.class);
         softAssert = new SoftAssert();
         actions = new Actions(driver);
+        js = (JavascriptExecutor) driver;
 
         etsySearchPage = new EtsySearchPage(driver);
         tgApplicationPage = new TGApplicationPage(driver);
@@ -60,6 +62,5 @@ public class Base {
         softAssert.assertAll();
         Driver.quitDriver(); // THIS METHOD IN OUR UTIL. CLASS TEARDOWN THE DRIVER COMPLETELY INCLUDING DELETING ANY STORED DATA(COOKIES)
     }
-
 
 }
