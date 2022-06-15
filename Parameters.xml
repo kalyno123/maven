@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parameter Suite">
+    <test verbose="2" preserve-order="true" name="Parameters">
+        <parameter name="username" value="janedoe"/>
+        <parameter name="password" value="1234abcd"/>
+
+        <classes>
+            <class name="testng_learning._06_Parameters"/>
+        </classes>
+    </test>
+</suite>

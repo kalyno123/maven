@@ -19,8 +19,7 @@ public class _01_AppleTest {
         driver = Driver.getDriver();
     }
 
-
-    @Test // this is annotation make this method executable without main(); -- this will look for @BeforeMethod annotation and run that first
+    @Test (groups = "Functional")// this is annotation make this method executable without main(); -- this will look for @BeforeMethod annotation and run that first
     // 2. Validation of test - test
     public void testAppleTitle(){
         driver.get("https://www.apple.com/");

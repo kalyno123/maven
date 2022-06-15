@@ -35,7 +35,7 @@ public class Base {
     AmazonHomePage amazonHomePage;
     TGHomePage tgHomePage;
 
-    @BeforeMethod
+    @BeforeMethod (alwaysRun = true)
     // INITIALIZING OBJECTS VARIABLES
     public void setup(){
         driver = Driver.getDriver();
@@ -57,7 +57,7 @@ public class Base {
         tgHomePage = new TGHomePage(driver);
     }
 
-    @AfterMethod
+    @AfterMethod (alwaysRun = true)
     public void teardown(){
         softAssert.assertAll();
         Driver.quitDriver(); // THIS METHOD IN OUR UTIL. CLASS TEARDOWN THE DRIVER COMPLETELY INCLUDING DELETING ANY STORED DATA(COOKIES)
