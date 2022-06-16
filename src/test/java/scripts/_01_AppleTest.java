@@ -49,7 +49,7 @@ public class _01_AppleTest {
     public void X(){
         //fail(); method is used to fail a test on purpose
         //We use this for known issues; test cases that have a bug and a bug ticket is already generated for it.
-        Assert.fail("Failure on purpose"); // message here should be meaningful for reporting
+        Assert.fail("Failure on purpose"); // message here should be meaningful for reporting.
     }
 
     @AfterTest
@@ -57,7 +57,6 @@ public class _01_AppleTest {
     public void teardown(){
         Driver.quitDriver();
     }
-
 
 
 
@@ -79,8 +78,4 @@ public class _01_AppleTest {
         Driver.quitDriver();
     }
     */
-
-
-
-
 }
