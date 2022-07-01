@@ -2,7 +2,6 @@ package scripts;
 
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
-import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 import utilities.Waiters;
 

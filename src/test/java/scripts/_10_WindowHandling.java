@@ -8,7 +8,7 @@ public class _10_WindowHandling extends Base{
 
     /* WINDOW HANDLING NOTES:
     - getWindowHandle() method returns the unique id for current window as a String. SYNTAX: --> String currentWindowId = driver.getWindowHandle();
-    - getWindowHandles() method returns all window ids that opened in browser by Selenium, and it will return a set of unique window ids. SYNTAX: --> Set<String> allWindowIds = driver.getWindowHandles();
+    - getWindowHandles() method returns all window ids that opened in browser by Selenium, and it will return a SET of unique window ids. SYNTAX: --> Set<String> allWindowIds = driver.getWindowHandles();
     - switchTo() method can be used to switch window or tab. SYNTAX: --> driver.switchTo().window(windowToBeSwitched);
 
     - driver.close() method is used to close current window that Selenium focus is on.
@@ -17,8 +17,8 @@ public class _10_WindowHandling extends Base{
 
     HOW TO SWITCH TO 'CHILD' WINDOW?
     1. Get id (handle) of the parent (main) window
-    2. Get id (handle) of the all windows for opened with browser session and store in a set
-    3. Create an Iterator to loop through each window handle and once the window handle is not equal to main window handle, switch
+    2. Get id (handle) of the all windows opened with browser session and store in a set
+    3. Create an Iterator to loop through each window handle and once the window handle is not equal to main window handle, then switch.
     */
 
     /* TEST CASE 1:

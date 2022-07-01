@@ -25,8 +25,6 @@ public class _08_Alerts extends Base{
 
     }
 
-
-
     /* TEST CASE 2:
     Go to http://the-internet.herokuapp.com/
     Click on "JavaScript Alerts" link
@@ -67,7 +65,7 @@ public class _08_Alerts extends Base{
 
         heroAppPage.clickOnAlertButton("Click for JS Confirm");
         Alert alert = driver.switchTo().alert();
-        alert.dismiss();
+        alert.dismiss(); // here is when the action or handling of alert is done
         Assert.assertEquals(heroAppPage.resultParagraph.getText(), "You clicked: Cancel");
 
         heroAppPage.clickOnAlertButton("Click for JS Confirm");
@@ -104,8 +102,6 @@ public class _08_Alerts extends Base{
         Assert.assertEquals(heroAppPage.resultParagraph.getText(), "You entered: Hello");
     }
 
-
-
     /* TEST CASE 5:
     Go to https://www.amazon.com/
     Click on “Select your address” link in the top navigation bar
@@ -125,10 +121,4 @@ public class _08_Alerts extends Base{
 
         Assert.assertTrue(amazonHomePage.deliveryMessage.getText().contains(zipCode));
     }
-
-
-
-
-
-
 }

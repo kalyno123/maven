@@ -1,6 +1,5 @@
 package scripts;
 
-import com.sun.deploy.util.Waiter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -8,7 +7,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.Waiters;
 
-import java.time.Duration;
 import java.util.List;
 
 public class _12_ActionsClass extends Base{
@@ -42,7 +40,7 @@ public class _12_ActionsClass extends Base{
     @Test (priority = 2, description = "Actions | move to element 1")
     public void moveToElementPractice2(){
         driver.get("https://www.carvana.com/");
-        //driver.navigate().refresh(); // THIS REFRESHES THE DOM SO THE ELEMENT WILL EXIST IN THE DOWN AFTER THE REFRESH
+        driver.navigate().refresh(); // THIS REFRESHES THE DOM SO THE ELEMENT WILL EXIST IN THE DOM AFTER THE REFRESH
         WebElement financeDropdown = driver.findElement(By.cssSelector("div[data-cv-test='headerFinanceDropdown']"));
         Waiters.pause(5);
 

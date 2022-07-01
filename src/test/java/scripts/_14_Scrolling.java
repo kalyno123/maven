@@ -1,8 +1,5 @@
 package scripts;
 
-import com.sun.deploy.util.Waiter;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 import utilities.Waiters;
 
